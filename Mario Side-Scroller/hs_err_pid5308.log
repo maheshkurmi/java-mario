@@ -1,0 +1,714 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000006d51bc77, pid=5308, tid=3192
+#
+# JRE version: 6.0_20-b02
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (16.3-b01 mixed mode windows-amd64 )
+# Problematic frame:
+# C  [jsound.dll+0xbc77]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000004cf4a800):  JavaThread "Headspace mixer frame proc thread" daemon [_thread_in_native, id=3192, stack(0x0000000053f10000,0x0000000054010000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0xffffffffffffffff
+
+Registers:
+EAX=0x000000000206e2ba, EBX=0x000000005034be30, ECX=0x000000000206e2ba, EDX=0x00000000006b8fa0
+ESP=0x000000005400f210, EBP=0x0000000000000010, ESI=0x000000004cf4a9b8, EDI=0x000000000001ce00
+EIP=0x000000006d51bc77, EFLAGS=0x0000000000010283
+
+Top of Stack: (sp=0x000000005400f210)
+0x000000005400f210:   00000000006c0098 000000004cf4a800
+0x000000005400f220:   000000005400f810 000000004cf4a9b8
+0x000000005400f230:   000000004cf4a9b8 00000000006d5da0
+0x000000005400f240:   0000000000000040 000000004cf4a9b8
+0x000000005400f250:   000000005400f810 000000004cf4a9b8
+0x000000005400f260:   0000000000000000 000000000001ce00
+0x000000005400f270:   000000004cf4a9b8 0000000000000010
+0x000000005400f280:   00000000006b8fa0 000000006d51d4a0
+0x000000005400f290:   0000000022fe430c 000000004cf4a9b8
+0x000000005400f2a0:   000000005400f300 000000006d52b22b
+0x000000005400f2b0:   0000003b704803ca 0000000050310080
+0x000000005400f2c0:   0000000000000040 000000004cf4a9b8
+0x000000005400f2d0:   00000000006b8fa0 000000006d520e4d
+0x000000005400f2e0:   0000000000000000 000007fefd8210ac
+0x000000005400f2f0:   0000000000000048 0000000000000001
+0x000000005400f300:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x000000006d51bc77)
+0x000000006d51bc67:   e0 de 01 00 0f 84 05 03 00 00 4c 8b c1 41 8b ce
+0x000000006d51bc77:   41 2b 48 08 85 c9 7e 2f 48 83 82 e8 de 01 00 10 
+
+
+Stack: [0x0000000053f10000,0x0000000054010000],  sp=0x000000005400f210,  free space=3fc0000000000000000k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [jsound.dll+0xbc77]
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.sun.media.sound.MixerThread.runNative(J)V+0
+j  com.sun.media.sound.MixerThread.run()V+5
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000054f3e000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8900, stack(0x00000000791a0000,0x00000000792a0000)]
+  0x0000000054f3d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8896, stack(0x00000000790a0000,0x00000000791a0000)]
+  0x0000000054f3d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8892, stack(0x0000000078fa0000,0x00000000790a0000)]
+  0x0000000054f3c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8888, stack(0x0000000078ea0000,0x0000000078fa0000)]
+  0x0000000054f3b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8884, stack(0x0000000078da0000,0x0000000078ea0000)]
+  0x0000000054f3a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8880, stack(0x0000000078ca0000,0x0000000078da0000)]
+  0x0000000054f3a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8876, stack(0x0000000078ba0000,0x0000000078ca0000)]
+  0x0000000054f39000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8872, stack(0x0000000078aa0000,0x0000000078ba0000)]
+  0x0000000054f38800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8868, stack(0x00000000789a0000,0x0000000078aa0000)]
+  0x0000000054f37800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8864, stack(0x00000000788a0000,0x00000000789a0000)]
+  0x0000000054f37000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8860, stack(0x00000000787a0000,0x00000000788a0000)]
+  0x0000000054f36800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8856, stack(0x00000000786a0000,0x00000000787a0000)]
+  0x0000000054f35800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8852, stack(0x00000000785a0000,0x00000000786a0000)]
+  0x0000000054f35000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8848, stack(0x00000000784a0000,0x00000000785a0000)]
+  0x00000000556d5800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8844, stack(0x00000000783a0000,0x00000000784a0000)]
+  0x00000000556d4800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8840, stack(0x00000000782a0000,0x00000000783a0000)]
+  0x00000000556d4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8836, stack(0x00000000781a0000,0x00000000782a0000)]
+  0x00000000556d3800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8832, stack(0x00000000780a0000,0x00000000781a0000)]
+  0x00000000556d2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8828, stack(0x0000000077fa0000,0x00000000780a0000)]
+  0x00000000556d2000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8824, stack(0x0000000077ea0000,0x0000000077fa0000)]
+  0x00000000556d1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8820, stack(0x0000000077da0000,0x0000000077ea0000)]
+  0x00000000556d0800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8816, stack(0x0000000077ca0000,0x0000000077da0000)]
+  0x00000000556cf800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8812, stack(0x0000000077ba0000,0x0000000077ca0000)]
+  0x00000000556cf000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8808, stack(0x0000000077aa0000,0x0000000077ba0000)]
+  0x00000000556ce000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8804, stack(0x00000000779a0000,0x0000000077aa0000)]
+  0x00000000556cd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8800, stack(0x00000000773f0000,0x00000000774f0000)]
+  0x00000000556cd000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8796, stack(0x00000000772f0000,0x00000000773f0000)]
+  0x00000000556cc000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8792, stack(0x00000000771f0000,0x00000000772f0000)]
+  0x00000000556cb800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8788, stack(0x00000000770f0000,0x00000000771f0000)]
+  0x00000000556ca800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8784, stack(0x0000000076ff0000,0x00000000770f0000)]
+  0x00000000556ca000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8780, stack(0x0000000076ef0000,0x0000000076ff0000)]
+  0x00000000556c9000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8776, stack(0x0000000076df0000,0x0000000076ef0000)]
+  0x00000000556c8800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8772, stack(0x0000000076cf0000,0x0000000076df0000)]
+  0x00000000556c7800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8768, stack(0x0000000076bf0000,0x0000000076cf0000)]
+  0x00000000556c7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8764, stack(0x0000000076af0000,0x0000000076bf0000)]
+  0x00000000556c6800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8760, stack(0x00000000769f0000,0x0000000076af0000)]
+  0x00000000556c5800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8756, stack(0x00000000768f0000,0x00000000769f0000)]
+  0x00000000556c5000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8752, stack(0x00000000767f0000,0x00000000768f0000)]
+  0x00000000556c4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8748, stack(0x00000000766f0000,0x00000000767f0000)]
+  0x00000000556c3800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8744, stack(0x00000000765f0000,0x00000000766f0000)]
+  0x00000000556c2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8740, stack(0x00000000764f0000,0x00000000765f0000)]
+  0x00000000556c2000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8736, stack(0x00000000763f0000,0x00000000764f0000)]
+  0x00000000556c1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8732, stack(0x00000000762f0000,0x00000000763f0000)]
+  0x00000000556c0800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8728, stack(0x00000000761f0000,0x00000000762f0000)]
+  0x00000000556c0000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8724, stack(0x00000000760f0000,0x00000000761f0000)]
+  0x00000000556bf000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8720, stack(0x0000000075ff0000,0x00000000760f0000)]
+  0x00000000556be800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8716, stack(0x0000000075ef0000,0x0000000075ff0000)]
+  0x00000000556bd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8712, stack(0x0000000075df0000,0x0000000075ef0000)]
+  0x00000000556bd000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8708, stack(0x0000000075cf0000,0x0000000075df0000)]
+  0x00000000556bc000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8704, stack(0x0000000075bf0000,0x0000000075cf0000)]
+  0x00000000556bb800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8700, stack(0x0000000075af0000,0x0000000075bf0000)]
+  0x00000000556ba800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8696, stack(0x00000000759f0000,0x0000000075af0000)]
+  0x00000000556ba000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8692, stack(0x00000000758f0000,0x00000000759f0000)]
+  0x00000000556b9800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8688, stack(0x00000000757f0000,0x00000000758f0000)]
+  0x00000000556b8800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8680, stack(0x00000000756f0000,0x00000000757f0000)]
+  0x00000000556b8000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8676, stack(0x00000000755f0000,0x00000000756f0000)]
+  0x00000000556b7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8672, stack(0x00000000754f0000,0x00000000755f0000)]
+  0x00000000556b6800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8668, stack(0x00000000753f0000,0x00000000754f0000)]
+  0x00000000551fc000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8664, stack(0x00000000752f0000,0x00000000753f0000)]
+  0x00000000551fb000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8660, stack(0x00000000751f0000,0x00000000752f0000)]
+  0x00000000551fa800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8656, stack(0x00000000750f0000,0x00000000751f0000)]
+  0x00000000551f9800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8652, stack(0x0000000074ff0000,0x00000000750f0000)]
+  0x00000000551f9000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8644, stack(0x0000000074ef0000,0x0000000074ff0000)]
+  0x00000000551f8800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8640, stack(0x0000000074df0000,0x0000000074ef0000)]
+  0x00000000551f7800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8636, stack(0x0000000074cf0000,0x0000000074df0000)]
+  0x00000000551f7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8632, stack(0x0000000074bf0000,0x0000000074cf0000)]
+  0x00000000551f6000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8628, stack(0x0000000074af0000,0x0000000074bf0000)]
+  0x00000000551f5800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8624, stack(0x00000000749f0000,0x0000000074af0000)]
+  0x00000000551f4800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8620, stack(0x00000000748f0000,0x00000000749f0000)]
+  0x00000000551f4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8616, stack(0x00000000747f0000,0x00000000748f0000)]
+  0x00000000551f3000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8612, stack(0x00000000746f0000,0x00000000747f0000)]
+  0x00000000551f2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8608, stack(0x00000000745f0000,0x00000000746f0000)]
+  0x00000000551f2000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8604, stack(0x00000000744f0000,0x00000000745f0000)]
+  0x00000000551f1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8600, stack(0x00000000743f0000,0x00000000744f0000)]
+  0x00000000551f0800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8596, stack(0x00000000742f0000,0x00000000743f0000)]
+  0x00000000551ef800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8592, stack(0x0000000074160000,0x0000000074260000)]
+  0x00000000551ef000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8584, stack(0x0000000074060000,0x0000000074160000)]
+  0x00000000551ee000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8580, stack(0x0000000073f60000,0x0000000074060000)]
+  0x00000000551ed800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8560, stack(0x0000000073e60000,0x0000000073f60000)]
+  0x00000000551ec800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8552, stack(0x0000000073d60000,0x0000000073e60000)]
+  0x00000000551ec000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8548, stack(0x0000000073c60000,0x0000000073d60000)]
+  0x00000000551eb000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8544, stack(0x0000000073b60000,0x0000000073c60000)]
+  0x00000000551ea800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8540, stack(0x0000000073a60000,0x0000000073b60000)]
+  0x00000000551ea000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8536, stack(0x0000000073960000,0x0000000073a60000)]
+  0x00000000551e9000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8532, stack(0x0000000073860000,0x0000000073960000)]
+  0x00000000551e8800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8524, stack(0x0000000073760000,0x0000000073860000)]
+  0x00000000551e7800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8520, stack(0x0000000073660000,0x0000000073760000)]
+  0x00000000551e7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8516, stack(0x0000000073560000,0x0000000073660000)]
+  0x00000000551e6000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8512, stack(0x0000000073460000,0x0000000073560000)]
+  0x00000000551e5800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8508, stack(0x0000000073360000,0x0000000073460000)]
+  0x00000000551e4800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8504, stack(0x0000000073260000,0x0000000073360000)]
+  0x00000000551e4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8500, stack(0x0000000073160000,0x0000000073260000)]
+  0x00000000551e3800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8496, stack(0x0000000073060000,0x0000000073160000)]
+  0x00000000551e2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8492, stack(0x0000000072f60000,0x0000000073060000)]
+  0x00000000551e2000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8488, stack(0x0000000072e60000,0x0000000072f60000)]
+  0x00000000551e1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8484, stack(0x0000000072d60000,0x0000000072e60000)]
+  0x00000000551e0800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8480, stack(0x0000000072c60000,0x0000000072d60000)]
+  0x00000000551df800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8476, stack(0x0000000072b60000,0x0000000072c60000)]
+  0x00000000551df000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8472, stack(0x0000000072a60000,0x0000000072b60000)]
+  0x00000000551de000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8468, stack(0x0000000072960000,0x0000000072a60000)]
+  0x00000000551dd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8464, stack(0x0000000072860000,0x0000000072960000)]
+  0x00000000551dd000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8460, stack(0x0000000072760000,0x0000000072860000)]
+  0x00000000553a4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8456, stack(0x0000000072660000,0x0000000072760000)]
+  0x00000000553a3000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8452, stack(0x0000000072560000,0x0000000072660000)]
+  0x00000000553a2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8448, stack(0x0000000072460000,0x0000000072560000)]
+  0x00000000553a1800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8444, stack(0x0000000072360000,0x0000000072460000)]
+  0x00000000553a1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8440, stack(0x0000000072260000,0x0000000072360000)]
+  0x00000000553a0000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8436, stack(0x0000000072160000,0x0000000072260000)]
+  0x000000005539f800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8432, stack(0x0000000072060000,0x0000000072160000)]
+  0x000000005539f000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8428, stack(0x0000000071f60000,0x0000000072060000)]
+  0x000000005539e000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8424, stack(0x0000000071e60000,0x0000000071f60000)]
+  0x000000005539d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8420, stack(0x0000000071d60000,0x0000000071e60000)]
+  0x000000005539c800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8416, stack(0x0000000071c60000,0x0000000071d60000)]
+  0x000000005539c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8412, stack(0x0000000071b60000,0x0000000071c60000)]
+  0x000000005539b000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8408, stack(0x0000000071a60000,0x0000000071b60000)]
+  0x000000005539a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8404, stack(0x0000000071960000,0x0000000071a60000)]
+  0x0000000055399800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8400, stack(0x0000000071860000,0x0000000071960000)]
+  0x0000000055399000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8396, stack(0x0000000071760000,0x0000000071860000)]
+  0x0000000055398800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8392, stack(0x0000000071660000,0x0000000071760000)]
+  0x0000000055397800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8388, stack(0x0000000071560000,0x0000000071660000)]
+  0x0000000055397000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8384, stack(0x0000000071460000,0x0000000071560000)]
+  0x0000000055396000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8380, stack(0x0000000071360000,0x0000000071460000)]
+  0x0000000055395800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8376, stack(0x0000000071260000,0x0000000071360000)]
+  0x0000000055394800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8372, stack(0x0000000071160000,0x0000000071260000)]
+  0x0000000055394000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8368, stack(0x0000000071060000,0x0000000071160000)]
+  0x0000000055393000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8364, stack(0x0000000070f60000,0x0000000071060000)]
+  0x0000000055392800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8360, stack(0x0000000070e60000,0x0000000070f60000)]
+  0x0000000055392000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8356, stack(0x0000000070d60000,0x0000000070e60000)]
+  0x0000000055391000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8348, stack(0x0000000070c60000,0x0000000070d60000)]
+  0x0000000055390800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8344, stack(0x0000000070b60000,0x0000000070c60000)]
+  0x000000005538f800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8340, stack(0x0000000070a60000,0x0000000070b60000)]
+  0x000000005538f000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8336, stack(0x0000000070960000,0x0000000070a60000)]
+  0x000000005538e000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8332, stack(0x0000000070860000,0x0000000070960000)]
+  0x000000005538d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8328, stack(0x0000000070760000,0x0000000070860000)]
+  0x000000005538c800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8324, stack(0x0000000070660000,0x0000000070760000)]
+  0x000000005538c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8320, stack(0x0000000070560000,0x0000000070660000)]
+  0x000000005538b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8316, stack(0x0000000070460000,0x0000000070560000)]
+  0x000000005538a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8312, stack(0x0000000070360000,0x0000000070460000)]
+  0x000000005538a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8308, stack(0x0000000070260000,0x0000000070360000)]
+  0x0000000055389000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8304, stack(0x0000000070160000,0x0000000070260000)]
+  0x0000000055388800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8300, stack(0x0000000070060000,0x0000000070160000)]
+  0x0000000055387800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8296, stack(0x000000006ff60000,0x0000000070060000)]
+  0x0000000055387000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8292, stack(0x000000006fe60000,0x000000006ff60000)]
+  0x0000000055386000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8288, stack(0x000000006fca0000,0x000000006fda0000)]
+  0x0000000055385800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8284, stack(0x000000006fba0000,0x000000006fca0000)]
+  0x0000000055385000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8280, stack(0x000000006faa0000,0x000000006fba0000)]
+  0x0000000054edf800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8276, stack(0x000000006f9a0000,0x000000006faa0000)]
+  0x0000000054ede800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8272, stack(0x000000006f8a0000,0x000000006f9a0000)]
+  0x0000000054ede000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8268, stack(0x000000006f7a0000,0x000000006f8a0000)]
+  0x0000000054edd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8264, stack(0x000000006f6a0000,0x000000006f7a0000)]
+  0x0000000054edc800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8260, stack(0x000000006f5a0000,0x000000006f6a0000)]
+  0x0000000054edc000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8256, stack(0x000000006f4a0000,0x000000006f5a0000)]
+  0x0000000054edb000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8252, stack(0x000000006f3a0000,0x000000006f4a0000)]
+  0x0000000054eda800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8248, stack(0x000000006f2a0000,0x000000006f3a0000)]
+  0x0000000054ed9800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8244, stack(0x000000006f1a0000,0x000000006f2a0000)]
+  0x0000000054ed9000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8240, stack(0x000000006f0a0000,0x000000006f1a0000)]
+  0x0000000054ed8000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8236, stack(0x000000006efa0000,0x000000006f0a0000)]
+  0x0000000054ed7800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8232, stack(0x000000006eea0000,0x000000006efa0000)]
+  0x0000000054ed7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8228, stack(0x000000006eda0000,0x000000006eea0000)]
+  0x0000000054ed6000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8224, stack(0x000000006eca0000,0x000000006eda0000)]
+  0x0000000054ed5800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8220, stack(0x000000006eba0000,0x000000006eca0000)]
+  0x0000000054ed4800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8216, stack(0x000000006eaa0000,0x000000006eba0000)]
+  0x0000000054ed4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8212, stack(0x000000006e9a0000,0x000000006eaa0000)]
+  0x0000000054ed3000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8208, stack(0x000000006e8a0000,0x000000006e9a0000)]
+  0x0000000054ed2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8204, stack(0x000000006e7a0000,0x000000006e8a0000)]
+  0x0000000054ed1800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8200, stack(0x000000006e6a0000,0x000000006e7a0000)]
+  0x0000000054ed1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8196, stack(0x000000006e5a0000,0x000000006e6a0000)]
+  0x0000000054ed0800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=5836, stack(0x000000006e4a0000,0x000000006e5a0000)]
+  0x00000000550e5800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7096, stack(0x000000006e3a0000,0x000000006e4a0000)]
+  0x00000000550e4800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=2268, stack(0x000000006e2a0000,0x000000006e3a0000)]
+  0x00000000550e4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=5628, stack(0x000000006e1a0000,0x000000006e2a0000)]
+  0x00000000550e3000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=3644, stack(0x000000006e0a0000,0x000000006e1a0000)]
+  0x00000000550e2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=6256, stack(0x000000006dfa0000,0x000000006e0a0000)]
+  0x00000000550e1800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=3616, stack(0x000000006dea0000,0x000000006dfa0000)]
+  0x00000000550e1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=5856, stack(0x000000006d630000,0x000000006d730000)]
+  0x00000000550e0000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=6592, stack(0x000000006d3e0000,0x000000006d4e0000)]
+  0x00000000550df800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7184, stack(0x000000006ce90000,0x000000006cf90000)]
+  0x00000000550df000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7180, stack(0x000000006cd90000,0x000000006ce90000)]
+  0x00000000550de000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7196, stack(0x000000006cc90000,0x000000006cd90000)]
+  0x00000000550dd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7216, stack(0x000000006cb90000,0x000000006cc90000)]
+  0x00000000550dc800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7208, stack(0x000000006ca90000,0x000000006cb90000)]
+  0x00000000550dc000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7204, stack(0x000000006c990000,0x000000006ca90000)]
+  0x00000000550db000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7200, stack(0x000000006c890000,0x000000006c990000)]
+  0x00000000550da800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7192, stack(0x000000006c790000,0x000000006c890000)]
+  0x00000000550d9800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7212, stack(0x000000006c690000,0x000000006c790000)]
+  0x00000000550d9000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7220, stack(0x000000006c590000,0x000000006c690000)]
+  0x00000000550d8000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7224, stack(0x000000006c110000,0x000000006c210000)]
+  0x00000000550d7800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7188, stack(0x000000006bb50000,0x000000006bc50000)]
+  0x00000000550d7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=2764, stack(0x000000006ba50000,0x000000006bb50000)]
+  0x00000000550d6000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8188, stack(0x000000006b950000,0x000000006ba50000)]
+  0x0000000055217800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8184, stack(0x000000006b850000,0x000000006b950000)]
+  0x0000000055217000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8180, stack(0x000000006b750000,0x000000006b850000)]
+  0x0000000055216000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8176, stack(0x000000006b650000,0x000000006b750000)]
+  0x0000000055215800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8172, stack(0x000000006b550000,0x000000006b650000)]
+  0x0000000055214800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8168, stack(0x000000006b450000,0x000000006b550000)]
+  0x0000000055214000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8164, stack(0x000000006b350000,0x000000006b450000)]
+  0x0000000055213000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8160, stack(0x000000006b250000,0x000000006b350000)]
+  0x0000000055212800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8156, stack(0x000000006b150000,0x000000006b250000)]
+  0x0000000055212000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8152, stack(0x000000006b050000,0x000000006b150000)]
+  0x0000000055211000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8148, stack(0x000000006af50000,0x000000006b050000)]
+  0x0000000055210800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8144, stack(0x000000006ae50000,0x000000006af50000)]
+  0x000000005520f800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8140, stack(0x000000006ad50000,0x000000006ae50000)]
+  0x000000005520f000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8136, stack(0x000000006ac50000,0x000000006ad50000)]
+  0x000000005520e000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8132, stack(0x000000006ab50000,0x000000006ac50000)]
+  0x000000005520d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8128, stack(0x000000006aa50000,0x000000006ab50000)]
+  0x000000005520c800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8124, stack(0x000000006a950000,0x000000006aa50000)]
+  0x000000005520c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8120, stack(0x000000006a850000,0x000000006a950000)]
+  0x000000005520b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8116, stack(0x000000006a750000,0x000000006a850000)]
+  0x000000005520a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8112, stack(0x000000006a650000,0x000000006a750000)]
+  0x000000005520a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8108, stack(0x000000006a550000,0x000000006a650000)]
+  0x0000000055209000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8104, stack(0x000000006a450000,0x000000006a550000)]
+  0x0000000055208800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8100, stack(0x000000006a350000,0x000000006a450000)]
+  0x0000000055372800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8096, stack(0x000000006a250000,0x000000006a350000)]
+  0x0000000055372000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8092, stack(0x000000006a150000,0x000000006a250000)]
+  0x0000000055371000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8088, stack(0x000000006a050000,0x000000006a150000)]
+  0x0000000055370800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8084, stack(0x0000000069f50000,0x000000006a050000)]
+  0x0000000055370000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8080, stack(0x0000000069e50000,0x0000000069f50000)]
+  0x000000005536f000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8076, stack(0x0000000069d50000,0x0000000069e50000)]
+  0x000000005536e800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8072, stack(0x0000000069c50000,0x0000000069d50000)]
+  0x000000005536d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8068, stack(0x0000000069b50000,0x0000000069c50000)]
+  0x000000005536d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8064, stack(0x0000000069a50000,0x0000000069b50000)]
+  0x000000005536c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8060, stack(0x0000000069950000,0x0000000069a50000)]
+  0x000000005536b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8056, stack(0x0000000069850000,0x0000000069950000)]
+  0x000000005536a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8052, stack(0x0000000069750000,0x0000000069850000)]
+  0x000000005536a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8048, stack(0x0000000069650000,0x0000000069750000)]
+  0x0000000055369800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8044, stack(0x0000000069550000,0x0000000069650000)]
+  0x0000000055368800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8040, stack(0x0000000069450000,0x0000000069550000)]
+  0x0000000055368000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8036, stack(0x0000000069350000,0x0000000069450000)]
+  0x0000000055367000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8032, stack(0x0000000069250000,0x0000000069350000)]
+  0x0000000055366800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8028, stack(0x0000000069150000,0x0000000069250000)]
+  0x0000000055365800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8024, stack(0x0000000069050000,0x0000000069150000)]
+  0x0000000055365000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8020, stack(0x0000000068f50000,0x0000000069050000)]
+  0x0000000055364000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8016, stack(0x0000000068e50000,0x0000000068f50000)]
+  0x0000000055363800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8012, stack(0x0000000068d50000,0x0000000068e50000)]
+  0x000000005556a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8008, stack(0x0000000068c50000,0x0000000068d50000)]
+  0x0000000055569000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8004, stack(0x0000000068b50000,0x0000000068c50000)]
+  0x0000000055568800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=8000, stack(0x0000000068a50000,0x0000000068b50000)]
+  0x0000000055567800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7996, stack(0x0000000068950000,0x0000000068a50000)]
+  0x0000000055567000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7992, stack(0x0000000068850000,0x0000000068950000)]
+  0x0000000055566800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7988, stack(0x0000000068750000,0x0000000068850000)]
+  0x0000000055565800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7984, stack(0x0000000068650000,0x0000000068750000)]
+  0x0000000055565000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7980, stack(0x0000000068550000,0x0000000068650000)]
+  0x0000000055564000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7976, stack(0x0000000068450000,0x0000000068550000)]
+  0x0000000055563800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7972, stack(0x0000000068350000,0x0000000068450000)]
+  0x0000000055562800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7968, stack(0x0000000068250000,0x0000000068350000)]
+  0x0000000055562000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7964, stack(0x0000000068150000,0x0000000068250000)]
+  0x0000000055561000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7960, stack(0x0000000068050000,0x0000000068150000)]
+  0x0000000055560800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7956, stack(0x0000000067f50000,0x0000000068050000)]
+  0x0000000055560000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7952, stack(0x0000000067e50000,0x0000000067f50000)]
+  0x000000005555f000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7948, stack(0x0000000067d50000,0x0000000067e50000)]
+  0x000000005555e800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7944, stack(0x0000000067c50000,0x0000000067d50000)]
+  0x000000005555d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7940, stack(0x0000000067b50000,0x0000000067c50000)]
+  0x000000005555d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7936, stack(0x0000000067a50000,0x0000000067b50000)]
+  0x000000005555c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7932, stack(0x0000000067950000,0x0000000067a50000)]
+  0x000000005555b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7928, stack(0x0000000067850000,0x0000000067950000)]
+  0x000000005555a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7924, stack(0x0000000067750000,0x0000000067850000)]
+  0x0000000055705000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7920, stack(0x0000000067650000,0x0000000067750000)]
+  0x0000000055704000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7916, stack(0x0000000067550000,0x0000000067650000)]
+  0x0000000055703800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7912, stack(0x0000000067450000,0x0000000067550000)]
+  0x0000000055702800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7908, stack(0x0000000067350000,0x0000000067450000)]
+  0x0000000055702000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7904, stack(0x0000000067250000,0x0000000067350000)]
+  0x0000000055701000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7900, stack(0x0000000067150000,0x0000000067250000)]
+  0x0000000055700800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7896, stack(0x0000000067050000,0x0000000067150000)]
+  0x0000000055700000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7892, stack(0x0000000066f50000,0x0000000067050000)]
+  0x00000000556ff000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7888, stack(0x0000000066e50000,0x0000000066f50000)]
+  0x00000000556fe800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7884, stack(0x0000000066d50000,0x0000000066e50000)]
+  0x00000000556fd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7880, stack(0x0000000066c50000,0x0000000066d50000)]
+  0x00000000556fd000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7876, stack(0x0000000066b50000,0x0000000066c50000)]
+  0x00000000556fc000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7872, stack(0x0000000066a50000,0x0000000066b50000)]
+  0x00000000556fb800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7868, stack(0x0000000066950000,0x0000000066a50000)]
+  0x00000000556fa800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7864, stack(0x0000000066850000,0x0000000066950000)]
+  0x00000000556fa000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7860, stack(0x0000000066750000,0x0000000066850000)]
+  0x00000000556f9800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7856, stack(0x0000000066650000,0x0000000066750000)]
+  0x00000000556f8800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7852, stack(0x0000000066550000,0x0000000066650000)]
+  0x00000000556f8000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7848, stack(0x0000000066450000,0x0000000066550000)]
+  0x00000000556f7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7844, stack(0x0000000066350000,0x0000000066450000)]
+  0x00000000556f6800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7840, stack(0x0000000066250000,0x0000000066350000)]
+  0x00000000556f5800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7836, stack(0x0000000066150000,0x0000000066250000)]
+  0x000000005535a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7832, stack(0x0000000066050000,0x0000000066150000)]
+  0x000000005535a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7828, stack(0x0000000065f50000,0x0000000066050000)]
+  0x0000000055359000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7824, stack(0x0000000065e50000,0x0000000065f50000)]
+  0x0000000055358800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7820, stack(0x0000000065d50000,0x0000000065e50000)]
+  0x0000000055358000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7816, stack(0x0000000065c50000,0x0000000065d50000)]
+  0x0000000055357000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7812, stack(0x0000000065b50000,0x0000000065c50000)]
+  0x0000000055356800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7808, stack(0x0000000065a50000,0x0000000065b50000)]
+  0x0000000055355800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7804, stack(0x0000000065950000,0x0000000065a50000)]
+  0x0000000055355000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7800, stack(0x0000000065850000,0x0000000065950000)]
+  0x0000000055354000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7796, stack(0x0000000065750000,0x0000000065850000)]
+  0x0000000055353800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7792, stack(0x0000000065650000,0x0000000065750000)]
+  0x0000000055352800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7788, stack(0x0000000065550000,0x0000000065650000)]
+  0x0000000055352000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7784, stack(0x0000000065450000,0x0000000065550000)]
+  0x0000000055351800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7780, stack(0x0000000065350000,0x0000000065450000)]
+  0x0000000055350800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7776, stack(0x0000000065250000,0x0000000065350000)]
+  0x0000000055350000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7772, stack(0x0000000065150000,0x0000000065250000)]
+  0x000000005534f000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7768, stack(0x0000000065050000,0x0000000065150000)]
+  0x000000005534e800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7764, stack(0x0000000064f50000,0x0000000065050000)]
+  0x000000005534d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7760, stack(0x0000000064e50000,0x0000000064f50000)]
+  0x000000005534d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7756, stack(0x0000000064d50000,0x0000000064e50000)]
+  0x000000005534c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7752, stack(0x0000000064c50000,0x0000000064d50000)]
+  0x000000005534b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7748, stack(0x0000000064b50000,0x0000000064c50000)]
+  0x000000005551f800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7744, stack(0x0000000064a50000,0x0000000064b50000)]
+  0x000000005551e800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7740, stack(0x0000000064950000,0x0000000064a50000)]
+  0x000000005551e000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7736, stack(0x0000000064850000,0x0000000064950000)]
+  0x000000005551d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7732, stack(0x0000000064750000,0x0000000064850000)]
+  0x000000005551c800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7728, stack(0x0000000064650000,0x0000000064750000)]
+  0x000000005551c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7724, stack(0x0000000064550000,0x0000000064650000)]
+  0x000000005551b000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7720, stack(0x0000000064450000,0x0000000064550000)]
+  0x000000005551a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7716, stack(0x0000000064350000,0x0000000064450000)]
+  0x0000000055519800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7712, stack(0x0000000064250000,0x0000000064350000)]
+  0x0000000055519000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7708, stack(0x0000000064150000,0x0000000064250000)]
+  0x0000000055518000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7704, stack(0x0000000064050000,0x0000000064150000)]
+  0x0000000055517800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7700, stack(0x0000000063f50000,0x0000000064050000)]
+  0x0000000055516800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7696, stack(0x0000000063e50000,0x0000000063f50000)]
+  0x0000000055516000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7692, stack(0x0000000063d50000,0x0000000063e50000)]
+  0x0000000055515800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7688, stack(0x0000000063c50000,0x0000000063d50000)]
+  0x0000000055514800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7684, stack(0x0000000063b50000,0x0000000063c50000)]
+  0x0000000055514000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7680, stack(0x0000000063a50000,0x0000000063b50000)]
+  0x0000000055513000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7676, stack(0x0000000063950000,0x0000000063a50000)]
+  0x0000000055512800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7672, stack(0x0000000063850000,0x0000000063950000)]
+  0x0000000055511800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7668, stack(0x0000000063750000,0x0000000063850000)]
+  0x0000000055511000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7664, stack(0x0000000063650000,0x0000000063750000)]
+  0x0000000055510000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7660, stack(0x0000000063550000,0x0000000063650000)]
+  0x000000005567d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7656, stack(0x0000000063450000,0x0000000063550000)]
+  0x000000005567c800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7652, stack(0x0000000063350000,0x0000000063450000)]
+  0x000000005567c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7648, stack(0x0000000063250000,0x0000000063350000)]
+  0x000000005567b000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7644, stack(0x0000000063150000,0x0000000063250000)]
+  0x000000005567a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7640, stack(0x0000000063050000,0x0000000063150000)]
+  0x0000000055679800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7636, stack(0x0000000062f50000,0x0000000063050000)]
+  0x0000000055679000 JavaThread "Java Sound Sequencer" [_thread_in_vm, id=7632, stack(0x0000000062e50000,0x0000000062f50000)]
+  0x0000000055678000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7628, stack(0x0000000062d50000,0x0000000062e50000)]
+  0x0000000055677800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7624, stack(0x0000000062c50000,0x0000000062d50000)]
+  0x0000000055676800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7620, stack(0x0000000062b50000,0x0000000062c50000)]
+  0x0000000055676000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7616, stack(0x0000000062a50000,0x0000000062b50000)]
+  0x0000000049738800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7612, stack(0x0000000062950000,0x0000000062a50000)]
+  0x0000000049737800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7608, stack(0x0000000062850000,0x0000000062950000)]
+  0x0000000049737000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7604, stack(0x0000000062750000,0x0000000062850000)]
+  0x0000000049736800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7600, stack(0x0000000062650000,0x0000000062750000)]
+  0x0000000049735800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7596, stack(0x0000000062550000,0x0000000062650000)]
+  0x0000000049735000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7592, stack(0x0000000062450000,0x0000000062550000)]
+  0x0000000049734000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7588, stack(0x0000000062350000,0x0000000062450000)]
+  0x0000000049733800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7584, stack(0x0000000062250000,0x0000000062350000)]
+  0x0000000049732800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7580, stack(0x0000000062150000,0x0000000062250000)]
+  0x0000000049732000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7576, stack(0x0000000062050000,0x0000000062150000)]
+  0x0000000049731000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7572, stack(0x0000000061f50000,0x0000000062050000)]
+  0x00000000555dd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7568, stack(0x0000000061e50000,0x0000000061f50000)]
+  0x00000000555dc800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7564, stack(0x0000000061d50000,0x0000000061e50000)]
+  0x00000000555dc000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7560, stack(0x0000000061c50000,0x0000000061d50000)]
+  0x00000000555db000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7556, stack(0x0000000061b50000,0x0000000061c50000)]
+  0x00000000555da800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7552, stack(0x0000000061a50000,0x0000000061b50000)]
+  0x00000000555da000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7548, stack(0x0000000061950000,0x0000000061a50000)]
+  0x00000000555d9000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7544, stack(0x0000000061850000,0x0000000061950000)]
+  0x00000000555d8800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7540, stack(0x0000000061750000,0x0000000061850000)]
+  0x00000000555d7800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7536, stack(0x0000000061650000,0x0000000061750000)]
+  0x00000000555d7000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7532, stack(0x0000000061550000,0x0000000061650000)]
+  0x00000000555d6000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7528, stack(0x0000000061450000,0x0000000061550000)]
+  0x000000005569d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7524, stack(0x0000000061350000,0x0000000061450000)]
+  0x000000005569c800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7520, stack(0x0000000061250000,0x0000000061350000)]
+  0x000000005569c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7516, stack(0x0000000061150000,0x0000000061250000)]
+  0x000000005569b000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7512, stack(0x0000000061050000,0x0000000061150000)]
+  0x000000005569a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7508, stack(0x0000000060f50000,0x0000000061050000)]
+  0x0000000055699800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7504, stack(0x0000000060e50000,0x0000000060f50000)]
+  0x0000000055699000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7500, stack(0x0000000060d50000,0x0000000060e50000)]
+  0x0000000055698000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7496, stack(0x0000000060c50000,0x0000000060d50000)]
+  0x0000000055697800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7492, stack(0x0000000060b50000,0x0000000060c50000)]
+  0x0000000055696800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7488, stack(0x0000000060a50000,0x0000000060b50000)]
+  0x0000000055696000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7484, stack(0x0000000060950000,0x0000000060a50000)]
+  0x0000000055427000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7480, stack(0x0000000060850000,0x0000000060950000)]
+  0x0000000055426800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7476, stack(0x0000000060750000,0x0000000060850000)]
+  0x0000000055426000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7472, stack(0x0000000060650000,0x0000000060750000)]
+  0x0000000055425000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7468, stack(0x0000000060550000,0x0000000060650000)]
+  0x0000000055424800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7464, stack(0x0000000060450000,0x0000000060550000)]
+  0x0000000055423800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7460, stack(0x0000000060350000,0x0000000060450000)]
+  0x0000000055423000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7456, stack(0x0000000060250000,0x0000000060350000)]
+  0x0000000055422000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7452, stack(0x0000000060150000,0x0000000060250000)]
+  0x0000000055421800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7448, stack(0x0000000060050000,0x0000000060150000)]
+  0x0000000055420800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7444, stack(0x000000005ff50000,0x0000000060050000)]
+  0x0000000055420000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7440, stack(0x000000005fe50000,0x000000005ff50000)]
+  0x000000005509e000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7436, stack(0x000000005fd50000,0x000000005fe50000)]
+  0x000000005509d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7432, stack(0x000000005fc50000,0x000000005fd50000)]
+  0x000000005509d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7428, stack(0x000000005fb50000,0x000000005fc50000)]
+  0x000000005509c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7424, stack(0x000000005fa50000,0x000000005fb50000)]
+  0x000000005509b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7420, stack(0x000000005f950000,0x000000005fa50000)]
+  0x000000005509a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7416, stack(0x000000005f850000,0x000000005f950000)]
+  0x000000005509a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7412, stack(0x000000005f750000,0x000000005f850000)]
+  0x0000000055099000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7408, stack(0x000000005f650000,0x000000005f750000)]
+  0x0000000055098800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7404, stack(0x000000005f550000,0x000000005f650000)]
+  0x0000000055097800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7400, stack(0x000000005f450000,0x000000005f550000)]
+  0x0000000055097000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7396, stack(0x000000005f350000,0x000000005f450000)]
+  0x00000000551c4000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7392, stack(0x000000005f250000,0x000000005f350000)]
+  0x00000000551c3800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7388, stack(0x000000005f150000,0x000000005f250000)]
+  0x00000000551c2800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7384, stack(0x000000005f050000,0x000000005f150000)]
+  0x00000000551c2000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7380, stack(0x000000005ef50000,0x000000005f050000)]
+  0x00000000551c1000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7376, stack(0x000000005ee50000,0x000000005ef50000)]
+  0x00000000551c0800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7372, stack(0x000000005ed50000,0x000000005ee50000)]
+  0x00000000551bf800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7368, stack(0x000000005ec50000,0x000000005ed50000)]
+  0x00000000551bf000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7364, stack(0x000000005eb50000,0x000000005ec50000)]
+  0x00000000551be000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7360, stack(0x000000005ea50000,0x000000005eb50000)]
+  0x00000000551bd800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7356, stack(0x000000005e950000,0x000000005ea50000)]
+  0x00000000551bd000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7352, stack(0x000000005e850000,0x000000005e950000)]
+  0x0000000049851000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7348, stack(0x000000005e750000,0x000000005e850000)]
+  0x0000000049850800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7344, stack(0x000000005e650000,0x000000005e750000)]
+  0x000000004984f800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7340, stack(0x000000005e550000,0x000000005e650000)]
+  0x000000004984f000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7336, stack(0x000000005e450000,0x000000005e550000)]
+  0x000000004984e800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7332, stack(0x000000005e350000,0x000000005e450000)]
+  0x000000004984d800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7328, stack(0x000000005e250000,0x000000005e350000)]
+  0x000000004984d000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7324, stack(0x000000005e150000,0x000000005e250000)]
+  0x000000004984c000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7320, stack(0x000000005e050000,0x000000005e150000)]
+  0x000000004984b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7316, stack(0x000000005df50000,0x000000005e050000)]
+  0x000000004984a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7312, stack(0x000000005de50000,0x000000005df50000)]
+  0x000000004984a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7308, stack(0x000000005dd50000,0x000000005de50000)]
+  0x000000004d01b800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7304, stack(0x000000005cc80000,0x000000005cd80000)]
+  0x000000004d01a800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7300, stack(0x000000005cb80000,0x000000005cc80000)]
+  0x000000004d01a000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7296, stack(0x000000005ca80000,0x000000005cb80000)]
+  0x000000004d019800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7292, stack(0x000000005b9b0000,0x000000005bab0000)]
+  0x000000004d018800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7288, stack(0x000000005b8b0000,0x000000005b9b0000)]
+  0x000000004d018000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7284, stack(0x000000005b7b0000,0x000000005b8b0000)]
+  0x000000004d017000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7280, stack(0x000000005a6e0000,0x000000005a7e0000)]
+  0x000000004d016800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7276, stack(0x000000005a5e0000,0x000000005a6e0000)]
+  0x000000004d015800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7272, stack(0x000000005a4e0000,0x000000005a5e0000)]
+  0x000000004d015000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7268, stack(0x0000000059410000,0x0000000059510000)]
+  0x000000004d014000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7264, stack(0x0000000059310000,0x0000000059410000)]
+  0x000000004d013800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7260, stack(0x0000000059210000,0x0000000059310000)]
+  0x000000004d013000 JavaThread "Java Sound Sequencer" [_thread_blocked, id=7256, stack(0x0000000058140000,0x0000000058240000)]
+  0x000000004d012000 JavaThread "D3D Screen Updater" daemon [_thread_blocked, id=7172, stack(0x0000000057840000,0x0000000057940000)]
+  0x000000004d011800 JavaThread "DestroyJavaVM" [_thread_blocked, id=6616, stack(0x00000000024f0000,0x00000000025f0000)]
+  0x000000004d010800 JavaThread "The Animator V 3.0" [_thread_blocked, id=6572, stack(0x0000000056d30000,0x0000000056e30000)]
+  0x000000004d010000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=6188, stack(0x0000000056a30000,0x0000000056b30000)]
+  0x000000004d00f000 JavaThread "AWT-Shutdown" [_thread_blocked, id=6380, stack(0x0000000056930000,0x0000000056a30000)]
+  0x000000004d00e800 JavaThread "Java Sound Sequencer" [_thread_blocked, id=3476, stack(0x0000000056830000,0x0000000056930000)]
+  0x000000004d00d800 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=1824, stack(0x000000004a2c0000,0x000000004a3c0000)]
+  0x000000004d00d000 JavaThread "PooledThread-31" [_thread_blocked, id=3268, stack(0x0000000054710000,0x0000000054810000)]
+  0x000000004d00c800 JavaThread "PooledThread-30" [_thread_blocked, id=7144, stack(0x0000000054610000,0x0000000054710000)]
+  0x000000004cf4e000 JavaThread "PooledThread-29" [_thread_blocked, id=6336, stack(0x0000000054510000,0x0000000054610000)]
+  0x000000004cf4d800 JavaThread "PooledThread-28" [_thread_blocked, id=5712, stack(0x0000000054410000,0x0000000054510000)]
+  0x000000004cf4c800 JavaThread "PooledThread-27" [_thread_blocked, id=6208, stack(0x0000000054310000,0x0000000054410000)]
+  0x000000004cf4c000 JavaThread "PooledThread-26" [_thread_blocked, id=6252, stack(0x0000000054210000,0x0000000054310000)]
+  0x000000004cf4b000 JavaThread "PooledThread-25" [_thread_blocked, id=4508, stack(0x0000000054110000,0x0000000054210000)]
+=>0x000000004cf4a800 JavaThread "Headspace mixer frame proc thread" daemon [_thread_in_native, id=3192, stack(0x0000000053f10000,0x0000000054010000)]
+  0x000000004cf49800 JavaThread "PooledThread-24" [_thread_blocked, id=5420, stack(0x0000000053e10000,0x0000000053f10000)]
+  0x000000004cf49000 JavaThread "PooledThread-23" [_thread_blocked, id=6960, stack(0x0000000053d10000,0x0000000053e10000)]
+  0x000000004cf48800 JavaThread "PooledThread-22" [_thread_blocked, id=3776, stack(0x0000000053c10000,0x0000000053d10000)]
+  0x000000004cf47800 JavaThread "PooledThread-21" [_thread_blocked, id=6508, stack(0x0000000053b10000,0x0000000053c10000)]
+  0x000000004cf47000 JavaThread "PooledThread-20" [_thread_blocked, id=1108, stack(0x0000000053a10000,0x0000000053b10000)]
+  0x000000004cf46000 JavaThread "PooledThread-19" [_thread_blocked, id=3876, stack(0x0000000053910000,0x0000000053a10000)]
+  0x000000004cf45800 JavaThread "PooledThread-18" [_thread_blocked, id=608, stack(0x0000000053810000,0x0000000053910000)]
+  0x000000004cf44800 JavaThread "PooledThread-17" [_thread_blocked, id=6324, stack(0x0000000053710000,0x0000000053810000)]
+  0x000000004cf44000 JavaThread "PooledThread-16" [_thread_blocked, id=7020, stack(0x0000000053610000,0x0000000053710000)]
+  0x000000004cf43000 JavaThread "PooledThread-15" [_thread_blocked, id=6964, stack(0x0000000053510000,0x0000000053610000)]
+  0x000000004cf42800 JavaThread "PooledThread-14" [_thread_blocked, id=6664, stack(0x0000000053410000,0x0000000053510000)]
+  0x000000004cf42000 JavaThread "PooledThread-13" [_thread_blocked, id=1428, stack(0x0000000053310000,0x0000000053410000)]
+  0x000000004cf41000 JavaThread "PooledThread-12" [_thread_blocked, id=4024, stack(0x0000000053210000,0x0000000053310000)]
+  0x000000004cf40800 JavaThread "PooledThread-11" [_thread_blocked, id=7052, stack(0x0000000053110000,0x0000000053210000)]
+  0x000000004cf3f800 JavaThread "PooledThread-10" [_thread_blocked, id=4032, stack(0x0000000053010000,0x0000000053110000)]
+  0x000000004cf3f000 JavaThread "PooledThread-9" [_thread_blocked, id=2208, stack(0x0000000052f10000,0x0000000053010000)]
+  0x000000004cf1c800 JavaThread "PooledThread-8" [_thread_blocked, id=7120, stack(0x0000000052e10000,0x0000000052f10000)]
+  0x000000004cf1b800 JavaThread "PooledThread-7" [_thread_blocked, id=3008, stack(0x0000000052d10000,0x0000000052e10000)]
+  0x000000004cf1b000 JavaThread "PooledThread-6" [_thread_blocked, id=6364, stack(0x0000000052c10000,0x0000000052d10000)]
+  0x000000004cf1a000 JavaThread "PooledThread-5" [_thread_blocked, id=2220, stack(0x0000000052b10000,0x0000000052c10000)]
+  0x000000004cf19800 JavaThread "PooledThread-4" [_thread_blocked, id=1700, stack(0x0000000052a10000,0x0000000052b10000)]
+  0x000000004cf18800 JavaThread "PooledThread-3" [_thread_blocked, id=6976, stack(0x0000000052910000,0x0000000052a10000)]
+  0x000000004cf18000 JavaThread "PooledThread-2" [_thread_blocked, id=3488, stack(0x0000000052810000,0x0000000052910000)]
+  0x000000004cf17800 JavaThread "PooledThread-1" [_thread_blocked, id=4504, stack(0x0000000052710000,0x0000000052810000)]
+  0x000000004cf16800 JavaThread "PooledThread-0" [_thread_blocked, id=6128, stack(0x0000000052610000,0x0000000052710000)]
+  0x000000004cf16000 JavaThread "PooledThread-31" [_thread_blocked, id=6868, stack(0x0000000052510000,0x0000000052610000)]
+  0x000000004cf15000 JavaThread "PooledThread-30" [_thread_blocked, id=1708, stack(0x0000000052410000,0x0000000052510000)]
+  0x000000004cf14800 JavaThread "PooledThread-29" [_thread_blocked, id=2672, stack(0x0000000052310000,0x0000000052410000)]
+  0x000000004cf13800 JavaThread "PooledThread-28" [_thread_blocked, id=3484, stack(0x0000000052210000,0x0000000052310000)]
+  0x000000004cf13000 JavaThread "PooledThread-27" [_thread_blocked, id=5184, stack(0x0000000052110000,0x0000000052210000)]
+  0x000000004cf12000 JavaThread "PooledThread-26" [_thread_blocked, id=2860, stack(0x0000000052010000,0x0000000052110000)]
+  0x000000004cf11800 JavaThread "PooledThread-25" [_thread_blocked, id=1920, stack(0x0000000051f10000,0x0000000052010000)]
+  0x000000004cf11000 JavaThread "PooledThread-24" [_thread_blocked, id=6732, stack(0x0000000051e10000,0x0000000051f10000)]
+  0x000000004cf10000 JavaThread "PooledThread-23" [_thread_blocked, id=3608, stack(0x0000000051d10000,0x0000000051e10000)]
+  0x000000004cf0f800 JavaThread "PooledThread-22" [_thread_blocked, id=3992, stack(0x0000000051c10000,0x0000000051d10000)]
+  0x000000004cf0e800 JavaThread "PooledThread-21" [_thread_blocked, id=6316, stack(0x0000000051b10000,0x0000000051c10000)]
+  0x000000004cf0e000 JavaThread "PooledThread-20" [_thread_blocked, id=3664, stack(0x0000000051a10000,0x0000000051b10000)]
+  0x000000004cf0d000 JavaThread "PooledThread-19" [_thread_blocked, id=6220, stack(0x0000000051910000,0x0000000051a10000)]
+  0x000000004cee1000 JavaThread "PooledThread-18" [_thread_blocked, id=6076, stack(0x0000000051810000,0x0000000051910000)]
+  0x000000004cee0800 JavaThread "PooledThread-17" [_thread_blocked, id=5280, stack(0x0000000051710000,0x0000000051810000)]
+  0x000000004cedf800 JavaThread "PooledThread-16" [_thread_blocked, id=6796, stack(0x0000000051610000,0x0000000051710000)]
+  0x000000004cedf000 JavaThread "PooledThread-15" [_thread_blocked, id=1192, stack(0x0000000051510000,0x0000000051610000)]
+  0x000000004cede000 JavaThread "PooledThread-14" [_thread_blocked, id=6516, stack(0x0000000051410000,0x0000000051510000)]
+  0x000000004cedd800 JavaThread "PooledThread-13" [_thread_blocked, id=2184, stack(0x0000000051310000,0x0000000051410000)]
+  0x000000004cedc800 JavaThread "PooledThread-12" [_thread_blocked, id=5964, stack(0x0000000051210000,0x0000000051310000)]
+  0x000000004cedc000 JavaThread "PooledThread-11" [_thread_blocked, id=3568, stack(0x0000000051110000,0x0000000051210000)]
+  0x000000004cedb800 JavaThread "PooledThread-10" [_thread_blocked, id=3648, stack(0x0000000051010000,0x0000000051110000)]
+  0x000000004ceda800 JavaThread "PooledThread-9" [_thread_blocked, id=6900, stack(0x0000000050f10000,0x0000000051010000)]
+  0x000000004ceda000 JavaThread "PooledThread-8" [_thread_blocked, id=7000, stack(0x0000000050e10000,0x0000000050f10000)]
+  0x000000004ced9000 JavaThread "PooledThread-7" [_thread_blocked, id=1472, stack(0x0000000050d10000,0x0000000050e10000)]
+  0x000000004ced8800 JavaThread "PooledThread-6" [_thread_blocked, id=6768, stack(0x0000000050b10000,0x0000000050c10000)]
+  0x000000004ced7800 JavaThread "PooledThread-5" [_thread_blocked, id=6192, stack(0x0000000050a10000,0x0000000050b10000)]
+  0x000000004ced7000 JavaThread "PooledThread-4" [_thread_blocked, id=6484, stack(0x0000000050910000,0x0000000050a10000)]
+  0x000000004ced6000 JavaThread "PooledThread-3" [_thread_blocked, id=3244, stack(0x0000000050810000,0x0000000050910000)]
+  0x000000004ced5800 JavaThread "PooledThread-2" [_thread_blocked, id=804, stack(0x0000000050710000,0x0000000050810000)]
+  0x000000004ced5000 JavaThread "PooledThread-1" [_thread_blocked, id=6424, stack(0x0000000050610000,0x0000000050710000)]
+  0x000000004ced4000 JavaThread "PooledThread-0" [_thread_blocked, id=3956, stack(0x0000000050510000,0x0000000050610000)]
+  0x000000004ced3800 JavaThread "PooledThread-31" [_thread_blocked, id=4888, stack(0x0000000050210000,0x0000000050310000)]
+  0x000000004ced2800 JavaThread "PooledThread-30" [_thread_blocked, id=5412, stack(0x0000000050110000,0x0000000050210000)]
+  0x000000004ced2000 JavaThread "PooledThread-29" [_thread_blocked, id=2120, stack(0x0000000050010000,0x0000000050110000)]
+  0x000000004ceb8800 JavaThread "PooledThread-28" [_thread_blocked, id=2844, stack(0x000000004ff10000,0x0000000050010000)]
+  0x000000004ceb8000 JavaThread "PooledThread-27" [_thread_blocked, id=6896, stack(0x000000004fe10000,0x000000004ff10000)]
+  0x000000004ceb7000 JavaThread "PooledThread-26" [_thread_blocked, id=4792, stack(0x000000004fd10000,0x000000004fe10000)]
+  0x000000004ceb6800 JavaThread "PooledThread-25" [_thread_blocked, id=1624, stack(0x000000004fc10000,0x000000004fd10000)]
+  0x000000004ceb5800 JavaThread "PooledThread-24" [_thread_blocked, id=3528, stack(0x000000004fb10000,0x000000004fc10000)]
+  0x000000004ceb5000 JavaThread "PooledThread-23" [_thread_blocked, id=6384, stack(0x000000004fa10000,0x000000004fb10000)]
+  0x000000004ceb4000 JavaThread "PooledThread-22" [_thread_blocked, id=5580, stack(0x000000004f910000,0x000000004fa10000)]
+  0x000000004ceb3800 JavaThread "PooledThread-21" [_thread_blocked, id=5316, stack(0x000000004f810000,0x000000004f910000)]
+  0x000000004ceb3000 JavaThread "PooledThread-20" [_thread_blocked, id=3688, stack(0x000000004f710000,0x000000004f810000)]
+  0x000000004ceb2000 JavaThread "PooledThread-19" [_thread_blocked, id=2884, stack(0x000000004f610000,0x000000004f710000)]
+  0x000000004ceb1800 JavaThread "PooledThread-18" [_thread_blocked, id=3120, stack(0x000000004f510000,0x000000004f610000)]
+  0x000000004ceb0800 JavaThread "PooledThread-17" [_thread_blocked, id=5864, stack(0x000000004f410000,0x000000004f510000)]
+  0x000000004ceb0000 JavaThread "PooledThread-16" [_thread_blocked, id=1544, stack(0x000000004f310000,0x000000004f410000)]
+  0x000000004ceaf000 JavaThread "PooledThread-15" [_thread_blocked, id=5832, stack(0x000000004f210000,0x000000004f310000)]
+  0x000000004ceae800 JavaThread "PooledThread-14" [_thread_blocked, id=7016, stack(0x000000004f110000,0x000000004f210000)]
+  0x000000004cead800 JavaThread "PooledThread-13" [_thread_blocked, id=124, stack(0x000000004f010000,0x000000004f110000)]
+  0x000000004cead000 JavaThread "PooledThread-12" [_thread_blocked, id=4100, stack(0x000000004ef10000,0x000000004f010000)]
+  0x000000004ceac800 JavaThread "PooledThread-11" [_thread_blocked, id=372, stack(0x000000004ee10000,0x000000004ef10000)]
+  0x000000004ceab800 JavaThread "PooledThread-10" [_thread_blocked, id=5052, stack(0x000000004ed10000,0x000000004ee10000)]
+  0x000000004ceab000 JavaThread "PooledThread-9" [_thread_blocked, id=5344, stack(0x000000004ec10000,0x000000004ed10000)]
+  0x000000004ceaa000 JavaThread "PooledThread-8" [_thread_blocked, id=3712, stack(0x000000004eb10000,0x000000004ec10000)]
+  0x000000004cea9800 JavaThread "PooledThread-7" [_thread_blocked, id=1068, stack(0x000000004ea10000,0x000000004eb10000)]
+  0x0000000049838000 JavaThread "PooledThread-6" [_thread_blocked, id=7112, stack(0x000000004e910000,0x000000004ea10000)]
+  0x000000004982d800 JavaThread "PooledThread-5" [_thread_blocked, id=1200, stack(0x000000004e810000,0x000000004e910000)]
+  0x000000004982d000 JavaThread "PooledThread-4" [_thread_blocked, id=4388, stack(0x000000004e710000,0x000000004e810000)]
+  0x000000004980e000 JavaThread "PooledThread-3" [_thread_blocked, id=1940, stack(0x000000004e610000,0x000000004e710000)]
+  0x000000004980d800 JavaThread "PooledThread-2" [_thread_blocked, id=1652, stack(0x000000004e510000,0x000000004e610000)]
+  0x0000000049823000 JavaThread "PooledThread-1" [_thread_blocked, id=6244, stack(0x000000004e410000,0x000000004e510000)]
+  0x000000004986f000 JavaThread "PooledThread-0" [_thread_blocked, id=6184, stack(0x000000004e310000,0x000000004e410000)]
+  0x0000000049841000 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=5844, stack(0x000000004dcb0000,0x000000004ddb0000)]
+  0x00000000497b2000 JavaThread "AWT-Windows" daemon [_thread_in_native, id=6876, stack(0x000000004a3c0000,0x000000004a4c0000)]
+  0x00000000497aa000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=6620, stack(0x000000004a1c0000,0x000000004a2c0000)]
+  0x00000000496c8000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=5592, stack(0x0000000049c70000,0x0000000049d70000)]
+  0x00000000496c4800 JavaThread "CompilerThread1" daemon [_thread_blocked, id=5112, stack(0x0000000049b70000,0x0000000049c70000)]
+  0x00000000496c2800 JavaThread "CompilerThread0" daemon [_thread_blocked, id=864, stack(0x0000000049a70000,0x0000000049b70000)]
+  0x00000000496c0000 JavaThread "Attach Listener" daemon [_thread_blocked, id=3128, stack(0x0000000049970000,0x0000000049a70000)]
+  0x00000000496ba800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2228, stack(0x0000000049870000,0x0000000049970000)]
+  0x0000000000526000 JavaThread "Finalizer" daemon [_thread_blocked, id=1896, stack(0x0000000049570000,0x0000000049670000)]
+  0x000000000051f800 JavaThread "Reference Handler" daemon [_thread_blocked, id=5776, stack(0x0000000049470000,0x0000000049570000)]
+
+Other Threads:
+  0x000000000051b000 VMThread [stack: 0x0000000049370000,0x0000000049470000] [id=5596]
+  0x00000000496ca000 WatcherThread [stack: 0x0000000049d70000,0x0000000049e70000] [id=6216]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 18432K, used 6319K [0x0000000033d60000, 0x00000000351f0000, 0x00000000486b0000)
+  eden space 15808K, 23% used [0x0000000033d60000,0x00000000341015c0,0x0000000034cd0000)
+  from space 2624K, 99% used [0x0000000034f60000,0x00000000351ea7d8,0x00000000351f0000)
+  to   space 2624K, 0% used [0x0000000034cd0000,0x0000000034cd0000,0x0000000034f60000)
+ PSOldGen        total 42176K, used 14179K [0x000000000aab0000, 0x000000000d3e0000, 0x0000000033d60000)
+  object space 42176K, 33% used [0x000000000aab0000,0x000000000b888de8,0x000000000d3e0000)
+ PSPermGen       total 21248K, used 11383K [0x00000000056b0000, 0x0000000006b70000, 0x000000000aab0000)
+  object space 21248K, 53% used [0x00000000056b0000,0x00000000061cdd98,0x0000000006b70000)
+
+Dynamic libraries:
+0x0000000000400000 - 0x000000000042e000 	C:\Program Files\Java\jre6\bin\javaw.exe
+0x00000000777d0000 - 0x000000007797c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000776b0000 - 0x00000000777cf000 	C:\Windows\system32\kernel32.dll
+0x000007fefd820000 - 0x000007fefd88c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefe2e0000 - 0x000007fefe3bb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefe550000 - 0x000007fefe5ef000 	C:\Windows\system32\msvcrt.dll
+0x000007feff760000 - 0x000007feff77f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefdef0000 - 0x000007fefe01e000 	C:\Windows\system32\RPCRT4.dll
+0x00000000775b0000 - 0x00000000776aa000 	C:\Windows\system32\USER32.dll
+0x000007fefdc40000 - 0x000007fefdca7000 	C:\Windows\system32\GDI32.dll
+0x000007fefe3c0000 - 0x000007fefe3ce000 	C:\Windows\system32\LPK.dll
+0x000007fefe020000 - 0x000007fefe0ea000 	C:\Windows\system32\USP10.dll
+0x000007fefd600000 - 0x000007fefd657000 	C:\Windows\system32\apphelp.dll
+0x000007fef68f0000 - 0x000007fef6941000 	C:\Windows\AppPatch\AppPatch64\AcGenral.DLL
+0x000007fefd5d0000 - 0x000007fefd5f5000 	C:\Windows\system32\SspiCli.dll
+0x000007fefdb00000 - 0x000007fefdb71000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefe5f0000 - 0x000007fefe7f2000 	C:\Windows\system32\ole32.dll
+0x000007fefe930000 - 0x000007feff6b7000 	C:\Windows\system32\SHELL32.dll
+0x00000000742e0000 - 0x00000000742e3000 	C:\Windows\system32\sfc.dll
+0x000007fef8bd0000 - 0x000007fef8be0000 	C:\Windows\system32\sfc_os.DLL
+0x000007fefca80000 - 0x000007fefca9e000 	C:\Windows\system32\USERENV.dll
+0x000007fefd730000 - 0x000007fefd73f000 	C:\Windows\system32\profapi.dll
+0x000007fefba00000 - 0x000007fefba18000 	C:\Windows\system32\dwmapi.dll
+0x000007fefa240000 - 0x000007fefa258000 	C:\Windows\system32\MPR.dll
+0x000007feffab0000 - 0x000007feffade000 	C:\Windows\system32\IMM32.DLL
+0x000007fefdcb0000 - 0x000007fefddb9000 	C:\Windows\system32\MSCTF.dll
+0x000000006d7f0000 - 0x000000006de95000 	C:\Program Files\Java\jre6\bin\server\jvm.dll
+0x000007fef9db0000 - 0x000007fef9deb000 	C:\Windows\system32\WINMM.dll
+0x000000006d760000 - 0x000000006d76e000 	C:\Program Files\Java\jre6\bin\verify.dll
+0x000000006d3b0000 - 0x000000006d3d7000 	C:\Program Files\Java\jre6\bin\java.dll
+0x000000006d310000 - 0x000000006d31a000 	C:\Program Files\Java\jre6\bin\hpi.dll
+0x0000000077990000 - 0x0000000077997000 	C:\Windows\system32\PSAPI.DLL
+0x000000006d7b0000 - 0x000000006d7c2000 	C:\Program Files\Java\jre6\bin\zip.dll
+0x000000006d000000 - 0x000000006d1c3000 	C:\Program Files\Java\jre6\bin\awt.dll
+0x000007fefb5d0000 - 0x000007fefb640000 	C:\Windows\system32\WINSPOOL.DRV
+0x000007fefbf60000 - 0x000007fefc154000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7600.16661_none_fa62ad231704eab7\COMCTL32.dll
+0x000007fefbeb0000 - 0x000007fefbf06000 	C:\Windows\system32\uxtheme.dll
+0x000000006d2a0000 - 0x000000006d30b000 	C:\Program Files\Java\jre6\bin\fontmanager.dll
+0x000007fefd660000 - 0x000007fefd66f000 	C:\Windows\system32\CRYPTBASE.dll
+0x000007fee9240000 - 0x000007fee943f000 	C:\Windows\system32\d3d9.dll
+0x000007fefc850000 - 0x000007fefc85c000 	C:\Windows\system32\VERSION.dll
+0x000007fef8590000 - 0x000007fef8597000 	C:\Windows\system32\d3d8thk.dll
+0x000000006bc90000 - 0x000000006c10b000 	C:\Windows\system32\atiumd64.dll
+0x000000006c2f0000 - 0x000000006c587000 	C:\Windows\system32\atiumd6a.dll
+0x000000006d510000 - 0x000000006d53e000 	C:\Program Files\Java\jre6\bin\jsound.dll
+0x000007fefc2c0000 - 0x000007fefc30b000 	C:\Windows\system32\MMDevAPI.DLL
+0x000007fefc160000 - 0x000007fefc28c000 	C:\Windows\system32\PROPSYS.dll
+0x000007fefddc0000 - 0x000007fefde97000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fef8620000 - 0x000007fef865b000 	C:\Windows\system32\wdmaud.drv
+0x000000006fe50000 - 0x000000006fe56000 	C:\Windows\system32\ksuser.dll
+0x000007fefc290000 - 0x000007fefc299000 	C:\Windows\system32\AVRT.dll
+0x000007fefe100000 - 0x000007fefe2d7000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefd7e0000 - 0x000007fefd816000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefd890000 - 0x000007fefd8aa000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fef8690000 - 0x000007fef86df000 	C:\Windows\system32\AUDIOSES.DLL
+0x000007fef8980000 - 0x000007fef898a000 	C:\Windows\system32\msacm32.drv
+0x000007fef8600000 - 0x000007fef8618000 	C:\Windows\system32\MSACM32.dll
+0x000007fef8970000 - 0x000007fef8979000 	C:\Windows\system32\midimap.dll
+0x000007fefdb80000 - 0x000007fefdc19000 	C:\Windows\system32\CLBCatQ.DLL
+0x000000006d600000 - 0x000000006d617000 	C:\Program Files\Java\jre6\bin\net.dll
+0x000007fefdea0000 - 0x000007fefdeed000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe0f0000 - 0x000007fefe0f8000 	C:\Windows\system32\NSI.dll
+0x000007fefcfa0000 - 0x000007fefcff4000 	C:\Windows\system32\mswsock.dll
+0x000007fefcf90000 - 0x000007fefcf97000 	C:\Windows\System32\wship6.dll
+0x000000006d620000 - 0x000000006d62b000 	C:\Program Files\Java\jre6\bin\nio.dll
+0x000000004a080000 - 0x000000004a0e5000 	C:\Program Files\WIDCOMM\Bluetooth Software\btmmhook.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: com.shikhar.mario.core.GameFrame
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;\;C:\Program Files (x86)\Sony\VAIO Startup Setting Tool;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\SlikSvn\bin
+USERNAME=mahesh
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 Build 7600 
+
+CPU:total 4 (8 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 4044900k(1394816k free), swap 8087900k(4227352k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (16.3-b01) for windows-amd64 JRE (1.6.0_20-b02), built on Apr 12 2010 13:44:19 by "java_re" with MS VC++ 8.0 (VS2005)
+
+time: Wed Aug 14 02:54:06 2013
+elapsed time: 34 seconds
+
